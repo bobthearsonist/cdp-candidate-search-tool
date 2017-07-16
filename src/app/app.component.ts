@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Reflow } from './reflow/reflow.model';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +8,9 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-    
+    reflows:Array<Reflow>;
+
+    constructor(){
+      this.reflows = new Array<Reflow>();//get this from a store somewhere
+    }
 }

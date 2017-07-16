@@ -5,13 +5,15 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { ReflowFormComponent } from './reflow-form/reflow-form.component';
-//import { ReflowComponent } from './reflow/reflow.component';
+import { ReflowComponent } from './reflow/reflow.component';
+import { ReflowStatusComponent } from './reflow-status/reflow-status.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ReflowFormComponent//,
- //   ReflowComponent
+    ReflowFormComponent,
+    ReflowComponent,
+    ReflowStatusComponent
   ],
   imports: [
     BrowserModule,
