@@ -1,0 +1,21 @@
+<form class="ui large form segment">
+  <h3 class="ui header">Reflow Candidate Data</h3>
+
+  <div class="field">
+    <label for="clientkey">Client Key</label>
+    <input name="clientkey" #clientkey>
+  </div>
+
+  <div class="field">
+
+  <div class="ui checkbox">
+    <input type="checkbox" tabindex="0" class="hidden">
+    <label>I am ready to reflow this data</label>
+  </div>
+  </div>
+
+  <button (click)="reflowButtonClicked(clientkey)" class="ui right button">
+    Reflow
+  </button>
+
+</form>

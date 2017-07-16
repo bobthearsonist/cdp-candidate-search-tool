@@ -4,10 +4,14 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { ReflowFormComponent } from './reflow-form/reflow-form.component';
+//import { ReflowComponent } from './reflow/reflow.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ReflowFormComponent//,
+ //   ReflowComponent
   ],
   imports: [
     BrowserModule,
