@@ -1,6 +1,7 @@
 import { Http } from '@angular/http';
 import { Component, OnInit } from '@angular/core';
 import { Reflow } from '../reflow/reflow.model';
+import { ReflowApiService } from '../reflow-api/reflow-api.service';
 
 @Component({
   selector: 'app-reflow-form',
@@ -8,10 +9,8 @@ import { Reflow } from '../reflow/reflow.model';
   styleUrls: ['./reflow-form.component.css']
 })
 export class ReflowFormComponent implements OnInit {
-  reflows:Array<Reflow>//TODO: store in a parent componenet for reflows 
   
-  constructor() { 
-    this.reflows = new Array<Reflow>();//TODO: populate from web store
+  constructor(private _reflowService:ReflowApiService) { 
   }
 
   ngOnInit() {
@@ -21,7 +20,8 @@ export class ReflowFormComponent implements OnInit {
     console.log(`reflowing: ${clientkey.value}`);
     
     let newReflow =  new Reflow(clientkey.value, "CandidateSearch");
-    this.reflows.push(newReflow);
+    
+    this._reflowService.reflow(newReflow.clientkey, newReflow.type)
 
     return false; 
   }

@@ -1,4 +1,4 @@
-<form class="ui large form segment">
+<form (submit)="reflowButtonClicked(clientkey)" class="ui large form segment">
   <h3 class="ui header">Reflow Candidate Data</h3>
 
   <div class="field">
@@ -13,7 +13,7 @@
     </div>
   </div>-->
 
-  <button (click)="reflowButtonClicked(clientkey)" class="ui right button">
+  <button class="ui right button">
     Reflow
   </button>
 

@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { ReflowFormComponent } from './reflow-form/reflow-form.component';
 import { ReflowComponent } from './reflow/reflow.component';
 import { ReflowStatusComponent } from './reflow-status/reflow-status.component';
+import { ReflowApiService } from './reflow-api/reflow-api.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,9 @@ import { ReflowStatusComponent } from './reflow-status/reflow-status.component';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+    providers: [
+    ReflowApiService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
