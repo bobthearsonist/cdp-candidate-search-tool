@@ -1,4 +1,3 @@
-import { Http } from '@angular/http';
 import { Component, OnInit } from '@angular/core';
 import { Reflow } from '../reflow/reflow.model';
 import { ReflowApiService } from '../reflow-api/reflow-api.service';

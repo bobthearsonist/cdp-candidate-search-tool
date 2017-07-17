@@ -18,7 +18,7 @@ export class ReflowApiService {
   {
     console.log("I am making a request");
     
-    let uri = "/reflow"
+    let uri = "/api/reflow"
 
     let body = new ReflowRequest(clientKey,type,"Both");
     
